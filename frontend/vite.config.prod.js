@@ -173,7 +173,7 @@ export default {
   build: {
     sourcemap: process.env.SENTRY,
     emptyOutDir: true,
-    outDir: "../dist",
+    outDir: "dist",
     assetsInlineLimit: 0, //dont inline small files as data
     rollupOptions: {
       input: {
