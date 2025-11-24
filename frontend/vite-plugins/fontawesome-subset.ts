@@ -185,6 +185,12 @@ function findAllFiles(
   const out: string[] = [];
   for (const file of files) {
     if (file.isDirectory) {
+      if (
+        file.name.endsWith("webfonts-generated") ||
+        file.name.endsWith("src/dist")
+      ) {
+        continue;
+      }
       out.push(...findAllFiles(file.name, filter));
     } else {
       out.push(file.name);
